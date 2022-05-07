@@ -92,7 +92,7 @@ class Counting(commands.Cog):
             to_delete = True
 
         # User repeated and allow repeats is off (delete)
-        if not guild_settings["allowrepeats"] and guild_settings["last"] == message.author.id:
+        if not guild_settings["allowrepeats"] and guild_settings["last"] == message.author.id and guild_settings["counter"] != 0:
             to_delete = True
 
         if to_delete:
