@@ -112,9 +112,9 @@ class Counting(commands.Cog):
                     )
                 )
 
-            if not guild_settings["delete"] or not permissions.manage_messages:
-                if guild_settings["react"] and permissions.add_reactions:
-                    await message.add_reaction("\N{CROSS MARK}")
+            # if not guild_settings["delete"] or not permissions.manage_messages:
+            #     if guild_settings["react"] and permissions.add_reactions:
+            #         await message.add_reaction("\N{CROSS MARK}")
             else:
                 self.deleted.append(message.id)
                 msg_copy = copy(message)
