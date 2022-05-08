@@ -251,6 +251,12 @@ class Counting(commands.Cog):
         await self.config.guild(ctx.guild).counter.set(num)
         return await ctx.tick()
 
+    @_counting_set.command(name="highscore")
+    async def _starting(self, ctx: commands.Context, num: int):
+        """Set the highscore with."""
+        await self.config.guild(ctx.guild).highscore.set(num)
+        return await ctx.tick()
+
     @_counting_set.command(name="allowtext")
     async def _allow_text(self, ctx: commands.Context, true_or_false: bool):
         """Set whether messages not starting with a number are allowed."""
